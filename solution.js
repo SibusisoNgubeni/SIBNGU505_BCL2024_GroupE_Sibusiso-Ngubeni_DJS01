@@ -7,12 +7,12 @@
 
 // Given Parameters
 
-const velocityKmh = 10000; // make objects to make calculations robust/velocity (km/h)
-const acceleration = 3; // acceleration (m/s^2)
-const time = 3600; // seconds (1 hour)
-const distance = 0; // distance (km)
-const fuel = 5000; // remaining fuel (kg)
-const fuelBurnRate = 0.5; // fuel burn rate (kg/s)
+const velocityKmh = {value: 10000, Unit: "Km/h"}; // make objects to make calculations robust/velocity (km/h)
+const acceleration = {value: 3, Unit: "M/s^2"};// acceleration (m/s^2)
+const time = {value: 3600, Unit: "seconds"}; // seconds (1 hour)
+const distance = {value: o, Unit: "Km"};// distance (km)
+const fuel = {value: 5000, Unit: "Kg"}; // remaining fuel (kg)
+const fuelBurnRate = {value: 0.5, Unit: "Kg/s"}; // fuel burn rate (kg/s)
 
 const KmhConversionFactor = 3.6;
 
@@ -20,8 +20,11 @@ const KmhConversionFactor = 3.6;
 
 
 const newDistance = (distance, velocityKmh, time) =>{
-  if (typeof distance!== "number" || typeof velocityKmh!== "number"  || typeof time!== "number") {
+  if (typeof (distancevalue)!== "number" || typeof velocityKmh!== "number"  || typeof time!== "number") {
     throw new Error('Invalid parameter type');
+  }
+  if (velocityKmh < 0 || acceleration < 0 || time < 0) {
+    throw new Error('Parameter value cannot be negative');
   }
   if (velocityKmh < 0 || acceleration < 0 || time < 0) {
     throw new Error('Parameter value cannot be negative');
