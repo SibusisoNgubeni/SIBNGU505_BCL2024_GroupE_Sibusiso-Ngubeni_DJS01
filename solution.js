@@ -6,14 +6,14 @@
  */
 
 // Given Parameters
-
-const velocityKmh = {value: 10000, Unit: "Km/h"}; // make objects to make calculations robust/velocity (km/h)
-const acceleration = {value: 3, Unit: "M/s^2"};// acceleration (m/s^2)
-const time = {value: 3600, Unit: "seconds"}; // seconds (1 hour)
-const distance = {value: o, Unit: "Km"};// distance (km)
-const fuel = {value: 5000, Unit: "Kg"}; // remaining fuel (kg)
-const fuelBurnRate = {value: 0.5, Unit: "Kg/s"}; // fuel burn rate (kg/s)
-
+const Parameters{
+ velocityKmh : {value: 10000, Unit: "Km/h"}. 
+ acceleration : {value: 3, Unit: "M/s^2"},
+ time : {value: 3600, Unit: "seconds"},
+ distance : {value: o, Unit: "Km"},
+ fuel : {value: 5000, Unit: "Kg"}, 
+ fuelBurnRate : {value: 0.5, Unit: "Kg/s"},
+}
 const KmhConversionFactor = 3.6;
 
 //Converted values
